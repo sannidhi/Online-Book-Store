@@ -1,0 +1,20 @@
+README
+
+Please follow these steps to Run the Project:
+
+1. First Unzip the project
+
+2. Navigate to the “online_bookstore” library:
+cd online_bookstore
+
+3. Run the python scripts
+
+python manage.py runserver
+
+4. Open the browser to view the project
+
+Project:
+http://127.0.0.1:8000/bookstore/
+
+Admin side:
+http://127.0.0.1:8000/admin/
