@@ -1,0 +1,21 @@
+{% extends 'bookstore/base.html' %}
+
+{% block content %}
+    <table border="1px" align="center">
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Total Price</th>
+        </tr>
+        {% for item in cart %}
+        <tr>
+            <td>{{ item.product.title }}</td>
+            <td>{{ item.quantity }}</td>
+            <td>{{ item.total_price }}</td>
+			<td><a href="/bookstore/cart/remove/{{ item.product.Productid }}">Remove from cart</a></td>
+        </tr>
+        {% endfor %}
+	</table>
+	<p><a href="http://www.paypal.com">CHECKOUT</a></p>
+	<p><a href="/bookstore/cart/clear">Clear cart</a></p>	
+{% endblock %}

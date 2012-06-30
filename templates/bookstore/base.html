@@ -1,0 +1,43 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>NYU Online Bookstore</title>
+		<style type="text/css">
+			body {
+				margin: 0 auto;
+				width: 990px;
+				background: #C3C3C3 url('{{ STATIC_URL }}img/bg.jpg') repeat-y;
+			}
+			h1 {
+				text-align: center;
+			}
+			nav {
+				border-bottom: 1px solid #999;
+			}
+			nav ul {
+				list-style: none;
+				text-align: center;
+			}
+			nav li {
+				display: inline;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="header">
+			<h1>Welcome to NYU Online Bookstore</h1>
+		</div>
+
+		<nav>
+			<ul>
+				<li><a href="/bookstore">Home</a></li>
+				<li><a href="/bookstore/cart/view">Cart</a></li>
+			</ul>
+		</nav>
+
+		<div id="content">
+			{% block content %}{% endblock %}
+		</div>
+	</body>
+</html>

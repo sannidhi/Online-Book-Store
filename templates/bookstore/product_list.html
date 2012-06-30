@@ -1,0 +1,10 @@
+{% extends 'bookstore/base.html' %}
+	{% block content %}
+	   <h2>Books</h2>
+	   <dl>
+			{% for book_dict in book_listing %}
+			     <dt>Title: <a href="{{book_dict.id}}/">{{book_dict.title}}</a></dt>
+			     <dd>Author: {{ book_dict.author}}</dd>
+			{% endfor %}
+	   </dl>
+	{% endblock %}
